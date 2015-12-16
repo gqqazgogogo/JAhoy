@@ -11,9 +11,10 @@ body {
 
 a {
   color: #1e6bb8;
-  text-decoration: none; }
+  text-decoration: none;
+  cursor:pointer; }
   a:hover {
-    text-decoration: underline; }
+    text-decoration: none; }
 
 .btn {
   display: inline-block;
@@ -243,3 +244,7 @@ a {
 @media screen and (max-width: 42em) {
   .site-footer {
     font-size: 0.9rem; } }
+
+.anchor {
+  color:#159957;
+}
