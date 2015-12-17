@@ -235,16 +235,22 @@ a {
 
 @media screen and (min-width: 64em) {
   .site-footer {
-    font-size: 1rem; } }
+    font-size: 10px; } }
 
 @media screen and (min-width: 42em) and (max-width: 64em) {
   .site-footer {
-    font-size: 1rem; } }
+    font-size: 10px; } }
 
 @media screen and (max-width: 42em) {
   .site-footer {
-    font-size: 0.9rem; } }
+    font-size: 10px; } }
 
 .anchor {
   color:#159957;
+}
+
+.contentImage {
+  height:40px;
+  width:40px;
+  border-radius: 4px;
 }
