@@ -18,7 +18,7 @@
 
     <section id="contentList" class="main-content">
       <h3>
-        <a id="welcome-to-github-pages" class="anchor" aria-hidden="true">
+        <a id="doc_01" class="anchor" aria-hidden="true">
           <span class="octicon octicon-link"></span>
         开通纪念</a>
       </h3>
@@ -42,11 +42,13 @@
   <script>
     $(document).ready(function() {
 
-      $('#welcome-to-github-pages').click(function() {
+      $('#doc_01').click(function() {
+        var urlString = $(this).attr('id');
+        urlString = urlString+'/'+urlString+'.html';
         $.ajax({
-          type : "GET",
-          url  : "doc_01/doc_01.html",
-          dataType : "html",
+          type : 'GET',
+          url  : urlString,
+          dataType : 'html',
           timeout : 10000,
           async   : true,
           success : function (returnData) {
