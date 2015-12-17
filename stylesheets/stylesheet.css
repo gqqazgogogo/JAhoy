@@ -254,3 +254,9 @@ a {
   width:40px;
   border-radius: 4px;
 }
+
+.time {
+  color:lightgray;
+  text-align: right;
+  font-size: 10px;
+}
