@@ -1,6 +1,7 @@
 body {
     overflow: hidden;
     background-color: gray;
+    min-width: 1280px;
 }
 .bg {
     display: none;
@@ -143,6 +144,18 @@ ol {
 }
 .userInfo {
     display: none;
+}
+@media screen and (min-height: 900px) {
+    .userInfo {
+        line-height:50px;
+        font-size: 20px;
+    }
+    .userHad {
+        top: 45px;
+        right: 90px;
+        width: 140px;
+        height: 140px;
+    }
 }
 .footer {
     font-size:12px;

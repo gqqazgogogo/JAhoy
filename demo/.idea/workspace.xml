@@ -26,8 +26,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.3556701">
-              <caret line="222" column="43" selection-start-line="222" selection-start-column="43" selection-end-line="222" selection-end-column="43" />
+            <state vertical-scroll-proportion="0.30927834">
+              <caret line="30" column="24" selection-start-line="30" selection-start-column="24" selection-end-line="30" selection-end-column="24" />
               <folding>
                 <element signature="n#style#0;n#span#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#ul#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -69,6 +69,16 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="index.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/css/index.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="unslider.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/unslider.js">
           <provider selected="true" editor-type-id="text-editor">
@@ -99,9 +109,9 @@
       <list>
         <option value="$PROJECT_DIR$/Animate.html" />
         <option value="$PROJECT_DIR$/Animate.css" />
-        <option value="$PROJECT_DIR$/css/index.css" />
         <option value="$PROJECT_DIR$/js/unslider.js" />
         <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/css/index.css" />
       </list>
     </option>
   </component>
@@ -140,7 +150,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -207,8 +216,9 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
       <pane id="PackagesPane" />
+      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -501,12 +511,13 @@
       <workItem from="1449906156661" duration="1498000" />
       <workItem from="1450063903650" duration="173000" />
       <workItem from="1450340447769" duration="7000" />
-      <workItem from="1450834864522" duration="1685000" />
+      <workItem from="1450834864522" duration="2024000" />
+      <workItem from="1450837108813" duration="431000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="26422000" />
+    <option name="totallyTimeSpent" value="27192000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="724" extended-state="6" />
@@ -553,6 +564,58 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="n#style#0;n#span#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#ul#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#li#0;n#ul#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#li#0;n#ul#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#li#0;n#ul#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#0;n#li#0;n#ul#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#3;n#div#0;n#div#0;n#div#0;n#li#0;n#ul#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#li#1;n#ul#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#li#1;n#ul#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#li#1;n#ul#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#ul#0;n#div#0;n#div#0;n#div#0;n#li#1;n#ul#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#li#0;n#ul#0;n#div#0;n#div#0;n#div#0;n#li#1;n#ul#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#li#1;n#ul#0;n#div#0;n#div#0;n#div#0;n#li#1;n#ul#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#li#2;n#ul#0;n#div#0;n#div#0;n#div#0;n#li#1;n#ul#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#li#3;n#ul#0;n#div#0;n#div#0;n#div#0;n#li#1;n#ul#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#li#4;n#ul#0;n#div#0;n#div#0;n#div#0;n#li#1;n#ul#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#li#5;n#ul#0;n#div#0;n#div#0;n#div#0;n#li#1;n#ul#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#li#6;n#ul#0;n#div#0;n#div#0;n#div#0;n#li#1;n#ul#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#li#7;n#ul#0;n#div#0;n#div#0;n#div#0;n#li#1;n#ul#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#li#8;n#ul#0;n#div#0;n#div#0;n#div#0;n#li#1;n#ul#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#li#9;n#ul#0;n#div#0;n#div#0;n#div#0;n#li#1;n#ul#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#li#10;n#ul#0;n#div#0;n#div#0;n#div#0;n#li#1;n#ul#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#li#11;n#ul#0;n#div#0;n#div#0;n#div#0;n#li#1;n#ul#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#li#12;n#ul#0;n#div#0;n#div#0;n#div#0;n#li#1;n#ul#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#li#13;n#ul#0;n#div#0;n#div#0;n#div#0;n#li#1;n#ul#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#li#14;n#ul#0;n#div#0;n#div#0;n#div#0;n#li#1;n#ul#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#li#15;n#ul#0;n#div#0;n#div#0;n#div#0;n#li#1;n#ul#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#li#16;n#ul#0;n#div#0;n#div#0;n#div#0;n#li#1;n#ul#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#li#17;n#ul#0;n#div#0;n#div#0;n#div#0;n#li#1;n#ul#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#li#18;n#ul#0;n#div#0;n#div#0;n#div#0;n#li#1;n#ul#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#li#19;n#ul#0;n#div#0;n#div#0;n#div#0;n#li#1;n#ul#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#li#2;n#ul#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#li#2;n#ul#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#li#3;n#ul#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#li#3;n#ul#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/unslider.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="527" column="32" selection-start-line="527" selection-start-column="32" selection-end-line="527" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1225,14 +1288,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/index.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="154" column="22" selection-start-line="154" selection-start-column="4" selection-end-line="154" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/unslider.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1241,10 +1296,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/css/index.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3556701">
-          <caret line="222" column="43" selection-start-line="222" selection-start-column="43" selection-end-line="222" selection-end-column="43" />
+        <state vertical-scroll-proportion="0.30927834">
+          <caret line="30" column="24" selection-start-line="30" selection-start-column="24" selection-end-line="30" selection-end-column="24" />
           <folding>
             <element signature="n#style#0;n#span#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#ul#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
