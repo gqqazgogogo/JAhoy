@@ -224,12 +224,9 @@
         $('.bg').fadeIn(function() {
             $('.userInfo').each(function(index,info){
                 setTimeout(function(){
-                    $(info).fadeIn(200);
                     $(info).addClass('animated bounceInUp');
+                    $(info).css('display','block');
                 },50*index);
-                setTimeout(function() {
-                    $(info).removeClass('bounceInUp');
-                },50*index+990);
             });
             setTimeout(function(){
                 $('.userHad').fadeIn(400).addClass('animated tada');
