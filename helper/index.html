@@ -1,0 +1,462 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <script type="text/javascript" src="jquery.js"></script>
+    <title>helper</title>
+    <style type="text/css">
+      body {
+          overflow:hidden;
+          min-height:100%;
+          min-width:100%;
+      }
+      a {
+          color:white;
+          text-decoration:none;
+      }
+      .discription {
+          display:none;
+          position:absolute;
+          color:white;
+          width:450px;
+          heigth:300px;
+          border:solid 1px white;
+          border-radius:5px;
+          top:50px;
+          left:50px;
+          word-wrap:break-word;
+          line-height:34px;
+          font-size:20px;
+      }
+      .discriptionDark {
+          background-color:gray;
+      }
+      .pageCtl {
+          font-size:25px;
+          margin-top:5px;
+          color:lightgray;
+          height:30px;
+          width:80px;
+          text-align:center;
+          line-height:30px;
+          cursor:pointer;
+          float:left;
+      }
+      .pageCtl:hover {
+          color:white;
+      }
+      .pageCtlNo {
+          cursor:not-allowed;
+          color:gray;
+      }
+      .pageCtlNo:hover {
+          color:gray;
+      }
+      .dots {
+          color:white;
+          float:left;
+          margin-left:15px;
+          list-style-type:circle;
+      }
+      .active {
+          list-style-type:disc;
+      }
+      .welcome {
+          font-size:60px;
+          line-height:60px;
+          text-align:center;
+      }
+      .mark {
+          border:1px dashed white;
+      }
+      #begin {
+          width:160px;
+          height:60px;
+          color:white;
+          font-size:30px;
+          text-align:center;
+          display:none;
+          left:45%;
+          line-height:60px;
+          border-radius:10px;
+          position:absolute;
+          border:solid 1px white; 
+          top:50%;
+          cursor:pointer;
+      }
+      #begin:hover {
+          background-color:#044E86;
+      }
+      #BICover {
+          width:207px;
+          height:99px;
+          background-color:black;
+          position:absolute;
+          top:99px;
+          left:1021px;
+          display:none;
+      }
+      #welcomeTitle {
+          color:white;
+          font-size:50px;
+          position:absolute;
+          top:20%;
+          text-align:center;
+          display:none;
+      }
+    </style>
+  </head>
+  <body style="margin:0;height:100%;">
+    <img id="background" src="helper/helperBg.jpg"
+         style="width:100%;height:100%;position:absolute; display:none;"/>
+    <div id="cover"
+         style="position:absolute;left:0;top:0px;height:100%;width:100%;background-color:black;opacity:0.8;filter:progid:DXImageTransform.Microsoft.Alpha(opacity=80);"></div>
+    <img id="helper-1" class="mark"
+         src="helper/helperImage01.jpg"
+         style="position:absolute;top:87px;left:114px; display:none;"/>
+     
+    <img id="helper-2" class="mark"
+         src="helper/helperImage02.jpg"
+         style="position:absolute;top:80px;left:575px; display:none;"/>
+     
+    <img id="helper-3" class="mark"
+         src="helper/helperImage03.jpg"
+         style="position:absolute;top:0px;left:782px; display:none;"/>
+     
+    <img id="helper-3-1" class="mark"
+         src="helper/helperImage04.jpg"
+         style="position:absolute;top:586px;left:1118px; display:none;"/>
+     
+    <img id="helper-4" class="mark"
+         src="helper/helperImage05.jpg"
+         style="position:absolute;top:99px;left:392px; display:none;"/>
+     
+    <img id="helper-4-1" class="mark"
+         src="helper/helperImage06.jpg"
+         style="position:absolute;top:70px;left:94px; display:none;"/>
+     
+    <img id="helper-5" class="mark"
+         src="helper/helperImage07.jpg"
+         style="position:absolute;top:95px;left:372px; display:none;"/>
+     
+    <img id="helper-5-1" class="mark"
+         src="helper/helperImage08.jpg"
+         style="position:absolute;top:362px;left:119px; display:none;"/>
+     
+    <img id="helper-5-2" class="mark"
+         src="helper/helperImage09.png"
+         style="position:absolute;top:534px;left:287px; display:none;"/>
+     
+    <img id="helper-6" class="mark" src=""
+         style="position:absolute;top:70px;left:94px; display:none;"/>
+    <div class="discription" style="display:none;top:300px;left:600px;">欢迎使用玉柴集团云门户，您是第一次登陆系统，请认真阅读本教程。您现在看到的是门户首页，首页中屏幕左侧高亮部分为固定应用区域，是系统默认设置的功能，其中应用商店可以添加新应用到您的自定义应用区域。</div>
+    <div id="pageCtlBg"
+         style="display:none;position:absolute;bottom:20px;left:480px;">
+      <span id="last" class="pageCtl pageCtlNo">◀</span>
+       
+      <span style="float:left;">
+        <ul style="margin-top:10px;">
+          <li class="dots active"></li>
+           
+          <li class="dots"></li>
+           
+          <li class="dots"></li>
+           
+          <li class="dots"></li>
+           
+          <li class="dots"></li>
+           
+          <li class="dots"></li>
+        </ul></span>
+       
+      <span id="next" class="pageCtl" style="margin-left:30px;">▶</span>
+    </div>
+    <div id="begin">
+      <a href="http://127.0.0.1:7001/PortalWebCenter/view/index.jsp">立即体验</a>
+    </div>
+    <div id="welcomeTitle">请您立即开始玉柴集团云门户体验之旅</div>
+  </body>
+</html> 
+<script type="text/javascript">
+    
+    
+
+  function flashTowTimes(a) {
+      a.fadeIn(600,function(){
+          a.fadeTo(500,0.4,function(){
+              a.fadeTo(600,1);
+          });
+      });
+  }
+  function flashing(a) {
+      a.fadeTo(1000,0.6,function() {
+          a.fadeOut(1000,function() {
+              flashing(a);
+          });
+      });
+  }
+  $(document).ready(function(){
+                    $('.discription').fadeIn(1200);
+                    $('#background').fadeIn(1200);
+      var discriptions = ["欢迎使用玉柴集团云门户，您是第一次登陆系统，请认真阅读本教程。您现在看到的是门户首页，首页中屏幕左侧高亮部分为固定应用区域，是系统默认设置的功能，其中应用商店可以添加新应用到您的自定义应用区域。",
+                            "首页中屏幕右侧高亮部分为自定义应用区域，是您将来经常使用的一些功能，您可以在应用商店中自行添加或取消添加。其中BI数据中的指标用于展现企业生产经营的KPI数据，如存货周转天数。",
+                            "首页中屏幕右上方区域高亮部分为个人信息区域，点击头像可以查看个人信息，点击个性设置可以更改自定义应用区域的布局，如果您的自定义应用存在多页，您可以通过点击右下方的翻页区域按钮进行翻页。",
+                            "您现在看到的是应用商店页面，应用商店可以添加或取消添加应用到首页的自定义应用区域中。",
+                            "您现在看到的是通讯录(上)和部门主页(下)，它们可由门户主页左侧默认应用进入，通讯录可通过不同条件维度查询当前选定机构下的企业人员通讯信息，如根据姓名/机构/岗位/移动电话等进行查询，每个查询条件用空格间隔，查询示例：陈凤 IT企划科。部门主页可展现和维护广西玉柴机器集团有限公司和广西玉柴机器股份有限公司的部门主页信息。",
+                            ""];
+                    
+                    
+      var topP = parseInt($('#cover').css('height'))/647;
+      var leftP = parseInt($('#cover').css('width'))/1280;
+      var positions = [[650,240],[80,240],[750,220],[520,15],[800,80],[0,0]];
+      var newPositions = [[0,0],[0,0],[0,0],[0,0],[0,0],[0,0]];
+      var imageSizes = [[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0]];
+      var imagePositions = [[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0]];
+                    
+      $('#welcomeTitle').css('width',parseInt($(window).width()));
+      $('.mark').each(function(index,image) {
+          var a = parseInt($(this).css('left'));
+          var b = parseInt($(this).css('top'));
+          var c = parseInt($(this).css('width'));
+          var d = parseInt($(this).css('height'));
+          imageSizes[index][0] = c;
+          imageSizes[index][1] = d;
+          imagePositions[index][0] = a;
+          imagePositions[index][1] = b;
+          a = a * leftP;
+          b = b * topP;
+          c = c * leftP;
+          d = d * topP;
+          $(this).css('left',a+'px');
+          $(this).css('top',b+'px');
+          $(this).css('width',c+'px');
+          $(this).css('height',d+'px');
+      });
+                    
+      var disleft = 450 * leftP;
+      var disFontSize = 20 * topP;
+      var disLineHeight = 34 * topP;
+      $('.discription').css('width',disleft+'px');
+      $('.discription').css('font-size',disFontSize+'px');
+      $('.discription').css('line-height',disLineHeight+'px');
+      
+      for (var i = 0; i < positions.length - 1; i++) {
+          newPositions[i][0] = positions[i][0] * leftP;
+          newPositions[i][1] = positions[i][1] * topP;
+      }
+      $('.discription').css('left',newPositions[0][0]+'px');
+      $('.discription').css('top',newPositions[0][1]+'px');
+      $('.discription').css('display','block');
+      
+      var pageCtlMargin = 480 * leftP;
+      $('#pageCtlBg').css('left',pageCtlMargin+'px');
+      $('#pageCtlBg').css('display','block');
+                    
+      $(window).resize(function () {
+                       topP = parseInt($('#cover').css('height'))/647;
+                       leftP = parseInt($('#cover').css('width'))/1280;
+                       
+                       $('#welcomeTitle').css('width',parseInt($(window).width()));
+                       $('.mark').each(function(index,image) {
+                                       var a = imagePositions[index][0];
+                                       var b = imagePositions[index][1];
+                                       var c = imageSizes[index][0];
+                                       var d = imageSizes[index][1];
+                                       a = a * leftP;
+                                       b = b * topP;
+                                       c = c * leftP;
+                                       d = d * topP;
+                                       $(this).css('left',a+'px');
+                                       $(this).css('top',b+'px');
+                                       $(this).css('width',c+'px');
+                                       $(this).css('height',d+'px');
+                                       });
+                       
+                       var disleft = 450 * leftP;
+                       var disFontSize = 20 * topP;
+                       var disLineHeight = 34 * topP;
+                       $('.discription').css('width',disleft+'px');
+                       $('.discription').css('font-size',disFontSize+'px');
+                       $('.discription').css('line-height',disLineHeight+'px');
+                       
+                       for (var i = 0; i < positions.length - 1; i++) {
+                       newPositions[i][0] = positions[i][0] * leftP;
+                       newPositions[i][1] = positions[i][1] * topP;
+                       }
+                       $('.discription').css('left',newPositions[currentPage - 1][0]+'px');
+                       $('.discription').css('top',newPositions[currentPage - 1][1]+'px');
+                       $('.discription').css('display','block');
+                       
+                       var pageCtlMargin = 480 * leftP;
+                       $('#pageCtlBg').css('left',pageCtlMargin+'px');
+                       $('#pageCtlBg').css('display','block');
+                       
+                       $('#BICover').css('left',1021*leftP+'px');
+                       $('#BICover').css('top',99*topP+'px');
+                       $('#BICover').css('width',207*leftP+'px');
+                       $('#BICover').css('height',99*topP+'px');
+      });
+                    
+      setTimeout(function(){
+          flashTowTimes($("#helper-1"));
+      },1500);
+      
+      var currentPage = 1;
+      var totalPage = 6;
+      var animating = true;
+                    setTimeout(function() {
+                               animating = false;
+                               },3400);
+      
+      $('#next').click(function() {
+          if(!animating && currentPage < totalPage) {
+                       animating = true;
+                       setTimeout(function() {
+                                  animating = false;
+                                  },2000);
+              $("#last").removeClass("pageCtlNo");
+              $(".mark").fadeOut();
+              $('.discription').fadeIn();
+              $('.discription').removeClass('discriptionDark');
+              $("#helper-"+currentPage).fadeOut(function() {
+                  currentPage += 1;
+                  if(currentPage == 4 || currentPage == 5) {
+                      $('#cover').fadeTo(300,0.5);
+                  } else {
+                      $('#cover').fadeTo(300,0.8);
+                  }
+                  $(".discription").text(discriptions[currentPage-1]);
+                  $(".discription").animate({
+                      left:newPositions[currentPage-1][0],
+                      top:newPositions[currentPage-1][1]
+                  },500);
+                  $(".dots").removeClass("active").eq(currentPage-1).addClass("active");
+                  if(currentPage != totalPage) {
+                      flashTowTimes($("#helper-"+currentPage));
+                  }
+                  
+                  if (currentPage == 3) {
+                      flashTowTimes($("#helper-3-1"));
+                  }
+                  
+                  if (currentPage == 2) {
+                      $('body').append('<div id="BICover"></div>');
+                                                $('#BICover').css('left',1021*leftP+'px');
+                                                $('#BICover').css('top',99*topP+'px');
+                                                $('#BICover').css('width',207*leftP+'px');
+                                                $('#BICover').css('height',99*topP+'px');
+                      setTimeout(function() {
+                          flashing($('#BICover'));
+                      },1300);
+                  } else {
+                      $('#BICover').remove();
+                  }
+                  
+                  if (currentPage == 4) {
+                      $('#background').fadeOut(300,function() {
+                          $('#background').attr('src','helper/helperAppBg.jpg');
+                          $('#background').fadeIn(100);
+                      });
+                      flashTowTimes($('#helper-4-1'));
+                      
+                  } else if(currentPage == 5) {
+                      $('#background').fadeOut(300,function() {
+                          $('#background').attr('src','helper/helperOtherBg.jpg');
+                          $('#background').fadeIn(100);
+                      });
+                      flashTowTimes($("#helper-5-1"));
+                      flashTowTimes($("#helper-5-2"));
+                      $('.discription').addClass('discriptionDark');
+                  }
+                  
+                  if(currentPage == totalPage){
+                      $('#background').fadeOut(300,function() {
+                          $('#background').attr('src','helper/helperBg.jpg');
+                          $('#background').fadeIn(100);
+                      });
+                      $(".discription").addClass("welcome");
+                      $('#next').addClass("pageCtlNo");
+                      $('#begin').fadeIn();
+                      $('.discription').css('display','none');
+                      $('#welcomeTitle').fadeIn();
+                  }
+              });
+          }
+      });
+      $('#last').click(function() {
+          
+          if(!animating && currentPage > 1) {
+                       animating = true;
+                       setTimeout(function() {
+                                  animating = false;
+                                  },2000);
+              $("#next").removeClass("pageCtlNo");
+              $(".mark").fadeOut();
+              $('#welcomeTitle').fadeOut();
+              $('.discription').fadeIn();
+              $('.discription').removeClass('discriptionDark');
+              $("#helper-"+currentPage).fadeOut(function() {
+                  currentPage -= 1;
+                  if(currentPage == 4 || currentPage == 5) {
+                      $('#cover').fadeTo(300,0.5);
+                  } else {
+                      $('#cover').fadeTo(300,0.8);
+                  }
+                  $('.discription').text(discriptions[currentPage-1]);
+                  $(".discription").animate({
+                      left:newPositions[currentPage-1][0],
+                      top:newPositions[currentPage-1][1]
+                  },500);
+                  $(".dots").removeClass("active").eq(currentPage-1).addClass("active");
+                  flashTowTimes($("#helper-"+currentPage));
+
+                  if (currentPage == 3) {
+                      flashTowTimes($("#helper-3-1"));
+                      $('#background').fadeOut(300,function() {
+                          $('#background').attr('src','helper/helperBg.jpg');
+                          $('#background').fadeIn(100);
+                      });
+                  }
+
+                  if (currentPage == 2) {
+                      $('body').append('<div id="BICover"></div>');
+                                                $('#BICover').css('left',1021*leftP+'px');
+                                                $('#BICover').css('top',99*topP+'px');
+                                                $('#BICover').css('width',207*leftP+'px');
+                                                $('#BICover').css('height',99*topP+'px');
+                      setTimeout(function() {
+                          flashing($('#BICover'));
+                      },1300);
+                  } else {
+                      $('#BICover').remove();
+                  }
+
+                  if (currentPage == 4) {                   
+                      $('#background').fadeOut(300,function() {
+                          $('#background').attr('src','helper/helperAppBg.jpg');
+                          $('#background').fadeIn(100);
+                          flashTowTimes($('#helper-4-1'));
+                      });
+                  }
+                  
+                  if (currentPage == 5) {
+                      $('#background').fadeOut(300,function() {
+                          $('#background').attr('src','helper/helperOtherBg.jpg');
+                          $('#background').fadeIn(100);
+                      });
+                      flashTowTimes($("#helper-5-1"));
+                      flashTowTimes($("#helper-5-2"));
+                      $(".discription").removeClass("welcome");
+                      $('#begin').fadeOut();
+                      $('.discription').addClass('discriptionDark');
+                  }
+
+                  if(currentPage == 1){
+                      $('#last').addClass("pageCtlNo");
+                  }
+              });
+              
+          } 
+      });
+  });
+</script>
