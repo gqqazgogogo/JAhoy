@@ -54,6 +54,7 @@ button {
     border-radius: 4px;
     margin-top: 20px;
     margin-bottom: 15px;
+    background-color: lightgray;
 }
 button:hover {
     background-color: rgb(91, 193, 91);

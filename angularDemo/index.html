@@ -16,7 +16,7 @@
 
         <div class="row">
             <input type="text" placeholder="请输入您的姓名" name="name" required
-                   ng-model="signup.name" ng-pattern="[a-z]" ng-minlength="3" ng-maxlength="20" />
+                   ng-model="signup.name" ng-minlength="3" ng-maxlength="20" />
             <!-- 验证提示框 -->
             <span class="errorSpan" ng-show="signup_form.name.$invalid && signup_form.name.$touched">
                 <div class="error" ng-show="signup_form.name.$error.required">姓名为必填。</div>
