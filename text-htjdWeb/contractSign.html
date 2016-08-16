@@ -111,7 +111,7 @@
       transform: translateY(-50%);
     }
     .hammer-box-scroll {
-      touch-action: pan-x pan-y !important;
+      touch-action: manipulation !important;
       -webkit-touch-callout: none;
       -webkit-user-drag: none;
     }
@@ -297,7 +297,6 @@
     var initScale = 1;
     mc.on('pinchstart pinchmove',function (ev) {
       //pinch scale
-      console.log(ev);
       if(ev.type == 'pinchstart') {
         imgBig.style.transform = "scale(1)";
         imgBig.style.left = 0;
@@ -313,10 +312,15 @@
 
         requestElementUpdate();
 
+        setTimeout(function (){
+          hammerBox.className = "hammer-box-scroll";
+        },200);
+
       }
     });
     //hammer 监听结束
 
+    //hammer animation
     function updateElementTransform() {
       var value = [
         'scale(' + transform.scale + ', ' + transform.scale + ')'
