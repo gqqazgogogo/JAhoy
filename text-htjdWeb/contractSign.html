@@ -105,7 +105,7 @@
     #hammer-box {
       width: 100%;
       max-height: 70%;
-      overflow: auto;
+      overflow: scroll;
       position: relative;
       top: 50%;
       transform: translateY(-50%);
@@ -279,6 +279,7 @@
 
     //hammer init
     var mc = new Hammer.Manager(hammerBox);
+    mc.add(new Hammer.Pan({ threshold: 0, pointers: 0 }));
     mc.add(new Hammer.Swipe());
     mc.add(new Hammer.Pinch({ threshold: 0 }));
 
