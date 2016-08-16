@@ -289,8 +289,7 @@
       console.log(ev);
       transform.top = ev.deltaY;
       transform.left = ev.deltaX;
-      imgBig.style.top = transform.top;
-      imgBig.style.left = transform.left;
+      requestElementUpdate();
     });
     mc.on('swipe', function(ev) {
       if(ev.deltaX < 0 && (currentIndex < imgNumIndex)) {
@@ -341,6 +340,7 @@
     //hammer animation
     function updateElementTransform() {
       var value = [
+        'translate('+transform.left+'px,'+transform.top+'px)',
         'scale(' + transform.scale + ', ' + transform.scale + ')'
       ];
 
