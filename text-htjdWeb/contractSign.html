@@ -110,20 +110,15 @@
       top: 50%;
       transform: translateY(-50%);
     }
-    .hammer-box-scroll {
-      touch-action: manipulation !important;
-      -webkit-touch-callout: none;
-      -webkit-user-drag: none;
-    }
     #image-big {
       position: relative;
       left: 0;
       width: 100%;
-      -webkit-transition: all 0.1s;
-      -moz-transition: all 0.1s;
-      -ms-transition: all 0.1s;
-      -o-transition: all 0.1s;
-      transition: all 0.1s;
+      -webkit-transition: all 0.01s;
+      -moz-transition: all 0.01s;
+      -ms-transition: all 0.01s;
+      -o-transition: all 0.01s;
+      transition: all 0.01s;
     }
     #hammer-page {
       position: absolute;
@@ -235,7 +230,7 @@
 
   <div id="hammer-mask"></div>
   <div id="hammer-bg" onclick="hideHammer(event)">
-    <div id="hammer-box" class="hammer-box-scroll">
+    <div id="hammer-box">
       <img id="image-big" src="images/htjd01.png" alt="">
     </div>
     <div id="hammer-page">1/1</div>
@@ -280,7 +275,7 @@
     //hammer init
     var mc = new Hammer.Manager(hammerBox);
     mc.add(new Hammer.Pan({ threshold: 0, pointers: 0 }));
-    mc.add(new Hammer.Swipe()).recognizeWith(mc.get('pan'));
+//    mc.add(new Hammer.Swipe()).recognizeWith(mc.get('pan'));
     mc.add(new Hammer.Pinch({ threshold: 0 })).recognizeWith(mc.get('pan'));
     mc.add(new Hammer.Tap({ event: 'doubletap', taps: 2 }));
 
@@ -291,16 +286,16 @@
       transform.left = ev.deltaX;
       requestElementUpdate();
     });
-    mc.on('swipe', function(ev) {
-      if(ev.deltaX < 0 && (currentIndex < imgNumIndex)) {
-        //next
-        nextImg();
-      }  else if (ev.deltaX > 0 && (currentIndex > 0)){
-        //last
-        lastImg();
-      }
-
-    });
+//    mc.on('swipe', function(ev) {
+//      if(ev.deltaX < 0 && (currentIndex < imgNumIndex)) {
+//        //next
+//        nextImg();
+//      }  else if (ev.deltaX > 0 && (currentIndex > 0)){
+//        //last
+//        lastImg();
+//      }
+//
+//    });
     var initScale = 1;
     mc.on('pinchstart pinchmove',function (ev) {
       //pinch scale
@@ -317,10 +312,6 @@
         transform.scale = initScale * ev.scale;
 
         requestElementUpdate();
-
-        setTimeout(function (){
-          hammerBox.className = "hammer-box-scroll";
-        },200);
 
       }
     });
