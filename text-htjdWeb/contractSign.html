@@ -297,22 +297,24 @@
 //
 //    });
     var initScale = 1;
-    mc.on('pinchstart pinchmove',function (ev) {
+    mc.on('pinchstart pinchmove pinchend',function (ev) {
       //pinch scale
       if(ev.type == 'pinchstart') {
         return;
-      } else {
+      } else if(ev.type == 'pinchmove') {
 
-        imgBig.className = '';
         transform.scale = initScale * ev.scale;
 
+        requestElementUpdate();
+
+      } else if (ev.type == 'pinchend') {
+
+        transform.scale = initScale * ev.scale;
         if(transform.scale > 0.9 | transform.scale < 1.1) {
           transform.scale = 1;
           transform.top = 0;
           transform.left = 0;
         }
-
-        requestElementUpdate();
 
       }
     });
