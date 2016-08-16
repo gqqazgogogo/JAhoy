@@ -274,16 +274,24 @@
       "images/htjd04.png"
     ];
     var ticking = false;
-    var transform = {scale: 1};
+    var transform = {scale: 1, top: 0, left: 0};
     var timer;
 
     //hammer init
     var mc = new Hammer.Manager(hammerBox);
-    mc.add(new Hammer.Swipe());
-    mc.add(new Hammer.Pinch({ threshold: 0 }));
+    mc.add(new Hammer.Pan({ threshold: 0, pointers: 0 }));
+    mc.add(new Hammer.Swipe()).recognizeWith(mc.get('pan'));
+    mc.add(new Hammer.Pinch({ threshold: 0 })).recognizeWith(mc.get('pan'));
     mc.add(new Hammer.Tap({ event: 'doubletap', taps: 2 }));
 
     //hammer 监听
+    mc.on('pan', function(ev) {
+      console.log(ev);
+      transform.top = ev.deltaY;
+      transform.left = ev.deltaX;
+      imgBig.style.top = transform.top;
+      imgBig.style.left = transform.left;
+    });
     mc.on('swipe', function(ev) {
       if(ev.deltaX < 0 && (currentIndex < imgNumIndex)) {
         //next
@@ -308,11 +316,6 @@
 
         imgBig.className = '';
         transform.scale = initScale * ev.scale;
-        if(transform.scale > 1) {
-          var shift = (transform.scale - 1)/2;
-          imgBig.style.top = imgBig.offsetHeight * shift;
-          imgBig.style.left = imgBig.offsetWidth * shift;
-        }
 
         requestElementUpdate();
 
