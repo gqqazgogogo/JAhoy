@@ -1,0 +1,162 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'HelveticaNeue', '黑体-简';
+  background-color: rgb(229, 241, 248);
+  color: #666;
+}
+
+ul {
+  padding-left: 0;
+  margin: 0;
+  background-color: #fff;
+  margin-bottom: 8px;
+  border-bottom: 1px solid rgba(0, 0, 0, .38);
+}
+
+li ul {
+  border: 0;
+}
+
+ul:last-of-type {
+  margin-bottom: 0;
+}
+
+.line {
+  height: 1px;
+  width: 100%;
+  background-color: rgba(0, 0, 0, .38);
+  display: block;
+}
+
+.short-line {
+  position: relative;
+  left: 20px;
+}
+
+.list-title {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 52px;
+  color: #666;
+  padding: 10px;
+  border-top: 1px solid rgba(0, 0, 0, .38);
+}
+
+.list-title .title-img {
+  width: 30px;
+  height: 30px;
+  margin-left: 10px;
+}
+
+.title-span {
+  margin-left: 5px;
+  display: block;
+  width: 100%;
+  float: right;
+}
+
+#projectBasicInfo .list-title .title-span {
+  display: inline-block;
+  line-height: 52px;
+}
+
+#projectBasicInfo .list-content {
+  clear: both;
+  display: inline-block;
+  width: 100%;
+  padding: 3px 0;
+  font-size: 16px;
+}
+
+.content-span-left {
+  color: #3A86E8;
+}
+
+.sub-title {
+  padding-left: 20px;
+  height: 32px;
+  line-height: 32px;
+  font-size: 16px;
+}
+
+.sub-title .title-span {
+  margin-left: 0;
+}
+
+#wmjg li ul,
+#install li ul,
+#productPack li ul,
+#wuliaoqingdan li ul {
+  margin-top: -18px;
+}
+
+.installPosition .list-content {
+  width: 30%;
+  float: left;
+  margin-left: 2.5%;
+  list-style: none;
+}
+
+.installPosition .list-content img {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+
+.clearfix {
+  clear: both;
+}
+
+#install .list-content .organize .list-content .content-span,
+#productPack .list-content .productPackage .list-content .content-span {
+  display: block;
+  padding: 3px 20px;
+}
+
+
+#projectBasicInfo .list-content,
+#wmjg .list-content ul .list-content,
+#productPack .list-content .leadRail .list-content,
+#productPack .list-content .zuChuanCanShu .list-content,
+#wuliaoqingdan .list-content .solarPowerComp .list-content,
+#wuliaoqingdan .list-content .fourWire .list-content,
+#wuliaoqingdan .list-content .cradle .list-content,
+#wuliaoqingdan .list-content .ACBox .list-content,
+#wuliaoqingdan .list-content .others .list-content {
+  display: block;
+  width: 100%;
+  height: 24px;
+  padding: 3px 0;
+}
+
+#projectBasicInfo .list-content .content-span-left,
+#wmjg .list-content ul .list-content .content-span-left,
+#productPack .list-content .leadRail .list-content .content-span-left,
+#productPack .list-content .zuChuanCanShu .list-content .content-span-left,
+#wuliaoqingdan .list-content .solarPowerComp .list-content .content-span-left,
+#wuliaoqingdan .list-content .fourWire .list-content .content-span-left,
+#wuliaoqingdan .list-content .cradle .list-content .content-span-left,
+#wuliaoqingdan .list-content .ACBox .list-content .content-span-left,
+#wuliaoqingdan .list-content .others .list-content .content-span-left {
+  float: left;
+  margin-left: 20px;
+}
+
+#projectBasicInfo .list-content .content-span-right,
+#wmjg .list-content ul .list-content .content-span-right,
+#productPack .list-content .leadRail .list-content .content-span-right,
+#productPack .list-content .zuChuanCanShu .list-content .content-span-right,
+#wuliaoqingdan .list-content .solarPowerComp .list-content .content-span-right,
+#wuliaoqingdan .list-content .fourWire .list-content .content-span-right,
+#wuliaoqingdan .list-content .cradle .list-content .content-span-right,
+#wuliaoqingdan .list-content .ACBox .list-content .content-span-right,
+#wuliaoqingdan .list-content .others .list-content .content-span-right {
+  float: right;
+  margin-right: 20px;
+}

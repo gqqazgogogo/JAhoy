@@ -1,0 +1,17 @@
+{
+  "code": "",
+  "data": {
+    "customerName": "李峰",
+    "customerContactMan": "1851110000",
+    "belongedDistrict": "上海市青浦区",
+    "addressSpec": "上海市青浦区久业路98号101",
+    "installCapacity": "2WK",
+
+    "dealer": "李峰",
+    "dealerSales": "发发",
+    "dealerTech": "个地方官的",
+    "installers": "发到付",
+    "installersPM": "范德萨发"
+  },
+  "msg": ""
+}

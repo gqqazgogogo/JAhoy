@@ -1,0 +1,67 @@
+{
+  "code": "",
+  "data": {
+    "customerName": "李峰",
+    "customerContactMan": "1861231234",
+    "belongedDistrict": "上海市-青浦区",
+    "addressSpec": "上海市青浦区久业路98号101",
+    "zjbx": "以明管方式进行布线，从东墙外墙遇到楼顶，并网在用户配电箱",
+    "nbqazwz": [{
+      "image_1": {
+        "largeImageUrl": "http://210.73.192.83/resource/images/LARGEa46d67c7-2369-4374-aa51-15dc4309ece7.jpg",
+        "middleImageUrl": "http://210.73.192.83/resource/images/MIDDLEa46d67c7-2369-4374-aa51-15dc4309ece7.jpg",
+        "smallImageUrl": "placeholder.png"
+      }
+    }, {
+      "image_1": {
+        "largeImageUrl": "http://210.73.192.83/resource/images/LARGEa46d67c7-2369-4374-aa51-15dc4309ece7.jpg",
+        "middleImageUrl": "http://210.73.192.83/resource/images/MIDDLEa46d67c7-2369-4374-aa51-15dc4309ece7.jpg",
+        "smallImageUrl": "placeholder.png"
+      }
+    }, {
+      "image_1": {
+        "largeImageUrl": "http://210.73.192.83/resource/images/LARGEa46d67c7-2369-4374-aa51-15dc4309ece7.jpg",
+        "middleImageUrl": "http://210.73.192.83/resource/images/MIDDLEa46d67c7-2369-4374-aa51-15dc4309ece7.jpg",
+        "smallImageUrl": "placeholder.png"
+      }
+    }, {
+      "image_1": {
+        "largeImageUrl": "http://210.73.192.83/resource/images/LARGEa46d67c7-2369-4374-aa51-15dc4309ece7.jpg",
+        "middleImageUrl": "http://210.73.192.83/resource/images/MIDDLEa46d67c7-2369-4374-aa51-15dc4309ece7.jpg",
+        "smallImageUrl": "placeholder.png"
+      }
+    }],
+    "fljd": "",
+    "productPack": "",
+    "leadRails": [{
+      "name": "leadRail1A",
+      "num": "2个"
+      }, {
+        "name": "leadRail1A",
+        "num": "2个"
+        }],
+    "zuChuanCanShu": {
+      "zuchuanshu": "2ge",
+      "zujian1zujianshuliang": "3ge",
+      "zujian2zujianshuliang": "17ge"
+    },
+    "SolarPowerComp": {
+      "others": ""
+    },
+    "nibianqi": {
+      "HTNT5KTL2Z": "32ge",
+      "HTNT5KTL1Z": "12ge"
+    },
+    "cradle": {
+      "": ""
+    },
+    "ACBox": {
+      "": ""
+    },
+    "others": {
+      "": ""
+    }
+
+  },
+  "msg": "操作成功"
+}

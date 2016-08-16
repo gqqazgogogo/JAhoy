@@ -1,0 +1,97 @@
+{
+  "code": "SUCCESS",
+  "data": {
+    "byk": 267380,
+    "classList": [
+      {
+        "NBQAZWZCT_FA": [
+          {
+            "largeImageUrl": "http://210.73.192.83/resource/images/LARGEa46d67c7-2369-4374-aa51-15dc4309ece7.jpg",
+            "middleImageUrl": "http://210.73.192.83/resource/images/MIDDLEa46d67c7-2369-4374-aa51-15dc4309ece7.jpg",
+            "smallImageUrl": "http://210.73.192.83/resource/images/SMALLa46d67c7-2369-4374-aa51-15dc4309ece7.jpg",
+            "uuid": "a46d67c7-2369-4374-aa51-15dc4309ece7"
+          }
+        ]
+      },
+      {
+        "ROOFPHOTO": [
+          {
+            "largeImageUrl": "http://210.73.192.83/resource/images/LARGE3224ae78-c67c-4457-a918-21d0539b4d92.jpg",
+            "middleImageUrl": "http://210.73.192.83/resource/images/MIDDLE3224ae78-c67c-4457-a918-21d0539b4d92.jpg",
+            "smallImageUrl": "http://210.73.192.83/resource/images/SMALL3224ae78-c67c-4457-a918-21d0539b4d92.jpg",
+            "uuid": "3224ae78-c67c-4457-a918-21d0539b4d92"
+          },
+          {
+            "largeImageUrl": "http://210.73.192.83/resource/images/LARGE26d92dd9-5f93-41d9-bfb9-b52ef802016a.jpg",
+            "middleImageUrl": "http://210.73.192.83/resource/images/MIDDLE26d92dd9-5f93-41d9-bfb9-b52ef802016a.jpg",
+            "smallImageUrl": "http://210.73.192.83/resource/images/SMALL26d92dd9-5f93-41d9-bfb9-b52ef802016a.jpg",
+            "uuid": "26d92dd9-5f93-41d9-bfb9-b52ef802016a"
+          }
+        ]
+      }
+    ],
+    "ddp": 133936,
+    "dg1a": 24,
+    "dg1b": 42,
+    "dg2a": 46,
+    "dg2b": 133332,
+    "dg3a": 246,
+    "guagou": "HTZ-G7",
+    "guagouLsType": "HTZ-LP6-80",
+    "guagouQty": 534582,
+    "hgjt": 23,
+    "inverter1": "HTNT8KTL2",
+    "inverter2": "",
+    "jdj": 133690,
+    "jiaju": "",
+    "jiajuLsType": "HTZ-LP8-120",
+    "jiajuQty": 534582,
+    "jldl": 213432,
+    "layoutOption1": "MING_GUANG",
+    "layoutOption2": "NORTH_METOPE",
+    "layoutOption3": "HOUSE_OUT",
+    "layoutOption4": "FLOOR_ONE",
+    "nbqazwz": "22",
+    "others": "213812",
+    "pdx": "HTPTY5K",
+    "pdxdby": "SOMETHING",
+    "productModel": "HT-80",
+    "projectId": 5614,
+    "remark": "12222233333333",
+    "solutionId": 31,
+    "spmsSurveyWmList": [
+      {
+        "ableLong": 2000,
+        "ableWeith": 1000,
+        "azqj": "DIP25",
+        "azsl": 44,
+        "bwwdlx": "坡瓦屋顶",
+        "nrqHeigth": 60,
+        "projectId": 5614,
+        "surveyWmId": 138,
+        "wdcx": "啊哈哈",
+        "wmLong": 2000,
+        "wmWeith": 1000,
+        "wmqj": 21,
+        "wmtq": "nono",
+        "wmxz": "12",
+        "zjjl": 171.557,
+        "zjsl": 44
+      }
+    ],
+    "xdType": "THREE_PHASE",
+    "zc1CptsNum": 321,
+    "zc2CptsNum": 55,
+    "zc3CptsNum": 576,
+    "zc4CptsNum": 8769,
+    "zcNum": 213,
+    "zj1a": 12,
+    "zj1b": 21,
+    "zj2a": 23,
+    "zj2b": 66666,
+    "zj3a": 123,
+    "zldl": 12312,
+    "zyk": 133870
+  },
+  "msg": "操作成功"
+}

@@ -1,0 +1,403 @@
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title></title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'HelveticaNeue', '黑体-简';
+      background-color: rgb(229, 241, 248);
+      color: #666;
+    }
+
+    .blur-tag {
+
+    }
+
+    ul {
+      padding-left: 0;
+      margin: 0;
+      background-color: #fff;
+      margin-bottom: 8px;
+      border-bottom: 1px solid LightGrey;
+      float: left;
+      width: 100%;
+    }
+
+    ul:last-of-type {
+      margin-bottom: 0;
+    }
+
+    .list-title {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      height: 52px;
+      padding: 10px;
+      border-top: 1px solid LightGrey;
+      border-bottom: 1px solid LightGrey;
+    }
+
+    .list-title .title-img {
+      width: 30px;
+      height: 30px;
+      margin-left: 10px;
+    }
+
+    .list-title .title-span {
+      line-height: 52px;
+      font-size: 16px;
+      margin-left: 5px;
+    }
+
+    .content-span-high {
+      color: #3A86E8;
+    }
+
+    #contractPic .list-content {
+      width: 30%;
+      float: left;
+      margin-left: 2.5%;
+      list-style: none;
+    }
+
+    #contractPic .list-content img {
+      display: inline-block;
+      width: 100%;
+      height: 100%;
+    }
+
+    #signInfo .list-content {
+      display: inline-block;
+      width: 100%;
+      font-size: 16px;
+      padding: 3px 20px;
+    }
+
+    #signInfo .list-content .content-span-left {
+      float: left;
+    }
+
+    #signInfo .list-content .content-span-right {
+      float: right;
+    }
+
+    #hammer-mask {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background-color: black;
+      opacity: 0.3;
+      display: none;
+    }
+    #hammer-bg {
+      position: absolute;
+      display: none;
+      width: 100%;
+      height: 100%;
+    }
+    #hammer-box {
+      width: 100%;
+      max-height: 70%;
+      overflow: auto;
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    .hammer-box-scroll {
+      touch-action: pan-x pan-y !important;
+      -webkit-touch-callout: none;
+      -webkit-user-drag: none;
+    }
+    #image-big {
+      position: relative;
+      left: 0;
+      width: 100%;
+      -webkit-transition: all 0.1s;
+      -moz-transition: all 0.1s;
+      -ms-transition: all 0.1s;
+      -o-transition: all 0.1s;
+      transition: all 0.1s;
+    }
+    #hammer-page {
+      position: absolute;
+      width: 100%;
+      text-align: center;
+      bottom: 0;
+      font-size: 20px;
+      color: white;
+      line-height: 30px;
+    }
+    #hammer-page-ctrl {
+      position: absolute;
+      width: 100%;
+      bottom: 0;
+    }
+    #hammer-page-ctrl > span {
+      color: white;
+      font-size: 30px;
+      padding: 0 20px;
+    }
+  </style>
+
+  <script src="javascripts/hammer/hammer.js"></script>
+  <script src="javascripts/ArrayForEach.js"></script>
+
+</head>
+<body>
+  <!-- 项目基本信息 -->
+  <ul id="signInfo" class="blur-tag">
+    <li class="list-title">
+      <img class="title-img" src="images/check-title-icon.png" alt="">
+      <span class="title-span">签订信息</span>
+      <span class="icon icon-arrow-down"></span>
+    </li>
+    <li class="list-content">
+      <span class="content-span-high content-span-left">客户名称</span>
+      <span class="content-span content-span-right">李峰</span>
+    </li>
+    <li class="list-content">
+      <span class="content-span-high content-span-left">客户联系人</span>
+      <span class="content-span content-span-right">李峰 1861231233</span>
+    </li>
+    <li class="list-content">
+      <span class="content-span-high content-span-left">所属地区</span>
+      <span class="content-span content-span-right">上海市-青浦区</span>
+    </li>
+    <li class="list-content">
+      <span class="content-span-high content-span-left">详细地址</span>
+      <span class="content-span content-span-right">就业路98号101</span>
+    </li>
+
+    <li class="list-content">
+      <span class="content-span-high content-span-left">收货地址</span>
+      <span class="content-span content-span-right">就业路98号101</span>
+    </li>
+    <li class="list-content">
+      <span class="content-span-high content-span-left">收货联系人</span>
+      <span class="content-span content-span-right">李峰</span>
+    </li>
+    <li class="list-content">
+      <span class="content-span-high content-span-left">联系人电话</span>
+      <span class="content-span content-span-right">1861231233</span>
+    </li>
+    <li class="list-content">
+      <span class="content-span-high content-span-left">合同金额</span>
+      <span class="content-span content-span-right"></span>
+    </li>
+    <li class="list-content">
+      <span class="content-span-high content-span-left">签订日期</span>
+      <span class="content-span content-span-right">默认当天，可改</span>
+    </li>
+  </ul>
+
+  <!-- 合同照片 -->
+  <ul id="contractPic" class="blur-tag">
+    <li class="list-title">
+      <img class="title-img" src="images/icon-pic-2.png" alt="">
+      <span class="title-span">合同照片</span>
+      <span class="icon icon-arrow-down"></span>
+    </li>
+    <li class="list-content">
+      <img onclick="showHammer()" class="image" src="images/adam.jpg" alt="">
+    </li>
+    <li class="list-content">
+      <img onclick="showHammer()" class="image" src="images/ben.png" alt="">
+    </li>
+    <li class="list-content">
+      <img onclick="showHammer()" class="image" src="images/build-icon.png" alt="">
+    </li>
+    <li class="list-content">
+      <img onclick="showHammer()" class="image" src="images/check-title-icon.png" alt="">
+    </li>
+    <li class="list-content">
+      <img onclick="showHammer()" class="image" src="images/htjd01.png" alt="">
+    </li>
+    <li class="list-content">
+      <img onclick="showHammer()" class="image" src="images/htjd02.png" alt="">
+    </li>
+    <li class="list-content">
+      <img onclick="showHammer()" class="image" src="images/htjd03.png" alt="">
+    </li>
+    <li class="list-content">
+      <img onclick="showHammer()" class="image" src="images/htjd04.png" alt="">
+    </li>
+    <li class="list-content">
+      <img onclick="showHammer('xxx')" class="image" src="images/icon-list.png" alt="">
+    </li>
+  </ul>
+
+  <div id="hammer-mask"></div>
+  <div id="hammer-bg" onclick="hideHammer(event)">
+    <div id="hammer-box">
+      <img id="image-big" src="images/htjd01.png" alt="">
+    </div>
+    <div id="hammer-page">1/1</div>
+    <div id="hammer-page-ctrl">
+      <span onclick="lastImg()" style="float: left"> < last </span>
+      <span onclick="nextImg()" style="float: right"> next > </span>
+    </div>
+  </div>
+
+  <script>
+    var images = document.querySelectorAll('.image');
+    var imageArray = Array.apply(null, images);
+    var vw = document.body.clientWidth;
+    var imageWidth = images[0].offsetWidth;
+    marginTop = (vw - imageWidth * 3) / 4;
+    imageArray.forEach(function(image) {
+      image.parentNode.style.height = imageWidth + 'px';
+      image.parentNode.style.marginTop = marginTop + 'px';
+    });
+    images[images.length - 1].parentNode.style.marginBottom = marginTop + 'px';
+  </script>
+
+  <!--use hammer-->
+  <script>
+    var imgs = document.getElementsByClassName('image');
+    var hammerMask = document.getElementById('hammer-mask');
+    var hammerBg = document.getElementById('hammer-bg');
+    var hammerBox = document.getElementById('hammer-box');
+    var hammerPage = document.getElementById('hammer-page');
+    var imgBig = document.getElementById('image-big');
+    var hammerImgs = [
+      "images/adam.jpg",
+      "images/htjd01.png",
+      "images/htjd02.png",
+      "images/htjd03.png",
+      "images/htjd04.png"
+    ];
+    var ticking = false;
+    var transform = {scale: 1};
+    var timer;
+
+    //hammer init
+    var mc = new Hammer.Manager(hammerBox);
+    mc.add(new Hammer.Swipe());
+    mc.add(new Hammer.Pinch({ threshold: 0 }));
+
+    //hammer 监听
+    mc.on('swipe', function(ev) {
+      if(ev.deltaX < 0 && (currentIndex < imgNumIndex)) {
+        //next
+        nextImg();
+      }  else if (ev.deltaX > 0 && (currentIndex > 0)){
+        //last
+        lastImg();
+      }
+
+    });
+
+    var initScale = 1;
+    mc.on('pinchstart pinchmove',function (ev) {
+      //pinch scale
+      console.log(ev);
+      if(ev.type == 'pinchstart') {
+        imgBig.style.transform = "scale(1)";
+        imgBig.style.left = 0;
+        imgBig.style.top = 0;
+      } else {
+
+        if(ev.type == 'pinchstart') {
+          initScale = transform.scale || 1;
+        }
+
+        imgBig.className = '';
+        transform.scale = initScale * ev.scale;
+
+        requestElementUpdate();
+
+      }
+    });
+    //hammer 监听结束
+
+    function updateElementTransform() {
+      var value = [
+        'scale(' + transform.scale + ', ' + transform.scale + ')'
+      ];
+
+      value = value.join(" ");
+      imgBig.style.webkitTransform = value;
+      imgBig.style.transform = value;
+      ticking = false;
+    }
+
+    function requestElementUpdate() {
+      if(!ticking) {
+        reqAnimationFrame(updateElementTransform);
+        ticking = true;
+      }
+    }
+
+    var reqAnimationFrame = (function () {
+      return window[Hammer.prefixed(window, 'requestAnimationFrame')] || function (callback) {
+                window.setTimeout(callback, 1000 / 60);
+              };
+    })();
+
+    var currentIndex = 0;
+    var imgNumIndex = 0;
+
+    function lastImg() {
+      if(currentIndex > 0) {
+        currentIndex--;
+        imgBig.src = hammerImgs[currentIndex];
+        hammerPage.innerHTML = (currentIndex+1)+"/"+(imgNumIndex+1);
+      }
+    }
+    function nextImg() {
+      if(currentIndex < imgNumIndex) {
+        currentIndex++;
+        imgBig.src = hammerImgs[currentIndex];
+        hammerPage.innerHTML = (currentIndex+1)+"/"+(imgNumIndex+1);
+      }
+    }
+
+    function showHammer(imageClassName,index) {
+      changecss('.blur-tag','-webkit-filter','blur(30px)');
+      document.body.style.overflow = "hidden";
+      currentIndex = 0;
+      imgBig.src = hammerImgs[0];
+      imgNumIndex = hammerImgs.length - 1;
+      hammerMask.style.height = document.children[0].offsetHeight;
+      hammerMask.style.display = "block";
+      hammerBg.style.display = "block";
+      hammerPage.innerHTML = (currentIndex+1)+"/"+(imgNumIndex+1);
+    }
+    function hideHammer(e) {
+      if(e.target.nodeName == "IMG" | e.target.nodeName == "SPAN") {
+        return;
+      }
+      changecss('.blur-tag','-webkit-filter','none');
+      document.body.style.overflow = "auto";
+      hammerMask.style.display = "none";
+      hammerBg.style.display = "none";
+    }
+
+    function changecss(theClass, element, value) {
+      var cssRules;
+      if (document.all) {
+        cssRules = 'rules';
+      } else if (document.getElementById) {
+        cssRules = 'cssRules';
+      }
+      for (var S = 0; S < document.styleSheets.length; S++) {
+        for (var R = 0; R < document.styleSheets[S][cssRules].length; R++) {
+          if (document.styleSheets[S][cssRules][R].selectorText == theClass) {
+            document.styleSheets[S][cssRules][R].style[element] = value;
+            return ;
+          }
+        }
+      }
+    }
+    
+  </script>
+
+
+</body>

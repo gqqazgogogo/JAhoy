@@ -1,0 +1,448 @@
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title></title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'HelveticaNeue', '黑体-简';
+      background-color: rgb(229, 241, 248);
+      color: #666;
+    }
+
+    ul {
+      padding-left: 0;
+      margin: 0;
+      background-color: #fff;
+      float: left;
+      width: 100%;
+      list-style: none;
+    }
+
+    ul:last-of-type {
+      margin-bottom: 0;
+    }
+
+    .list-title {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      height: 52px;
+      padding: 10px;
+    }
+
+    .list-title .title-img {
+      width: 30px;
+      height: 30px;
+      vertical-align: middle;
+    }
+
+    .list-title .title-span {
+      line-height: 52px;
+      font-size: 16px;
+      margin-left: 10px;
+    }
+
+    .content-span-high {
+      color: #3A86E8;
+    }
+
+    .image-wrap {
+      width: 30%;
+      float: left;
+      margin-left: 2.5%;
+      list-style: none;
+    }
+
+    .list-content img {
+      display: inline-block;
+      width: 100%;
+      height: 100%;
+    }
+
+    #installStart {
+      border-bottom: 1px solid rgba(0, 0, 0, .38);
+    }
+
+    #signInfo {
+      margin-bottom: 8px;
+    }
+
+    #signInfo .list-content {
+      display: inline-block;
+      width: 100%;
+      font-size: 16px;
+      padding: 3px 20px;
+    }
+
+    #signInfo .list-content .content-span-left {
+      float: left;
+    }
+
+    #signInfo .list-content .content-span-right {
+      float: right;
+    }
+
+    .icon-check {
+      color: red;
+      margin-right: 20px;
+    }
+
+    .line {
+      width:100%;
+      height: 1px;
+      background-color: rgba(0, 0, 0, .38);
+    }
+
+    .line-short {
+      width: 95%;
+      float: right;
+      height: 1px;
+      background-color: rgba(0, 0, 0, .38);
+    }
+  </style>
+
+</head>
+<body>
+  <!-- 项目基本信息 -->
+  <ul id="signInfo">
+    <li class="list-title">
+      <span class="title-span">
+        <img class="title-img" src="images/check-title-icon.png" alt="">
+        进度报告
+      </span>
+    </li>
+    <div class="line"></div>
+    <li class="list-content">
+      <span class="content-span-high content-span-left">客户名称</span>
+      <span class="content-span content-span-right">李峰</span>
+    </li>
+    <li class="list-content">
+      <span class="content-span-high content-span-left">客户联系人</span>
+      <span class="content-span content-span-right">李峰 1861231233</span>
+    </li>
+    <li class="list-content">
+      <span class="content-span-high content-span-left">所属地区</span>
+      <span class="content-span content-span-right">上海市-青浦区</span>
+    </li>
+    <li class="list-content">
+      <span class="content-span-high content-span-left">详细地址</span>
+      <span class="content-span content-span-right">就业路98号101</span>
+    </li>
+  </ul>
+
+  <!-- 进度 -->
+  <ul id="installStart">
+    <li class="list-title">
+      <span class="title-span">
+        <img class="title-img" src="images/check-title-icon.png" alt="">
+        开始安装
+      </span>
+      <span class="icon icon-check">√</span>
+    </li>
+  </ul>
+  <ul id="hookInstall">
+    <li class="list-title">
+      <span class="title-span">
+        <img class="title-img" src="images/check-title-icon.png" alt="">
+        挂钩（或基础）安装完成
+      </span>
+      <span class="icon icon-check">√</span>
+    </li>
+    <div class="line line-short"></div>
+    <li class="list-content">
+      <ul id="hook">
+        <li class="list-title">
+          <span class="title-span">挂钩（或基础）安装（与屋面的连接处）</span>
+        </li>
+        <li class="list-content image-wrap">
+          <img class="image" src="placeholder.png" alt="">
+        </li>
+        <li class="list-content image-wrap">
+          <img class="image" src="placeholder.png" alt="">
+        </li>
+        <li class="list-content image-wrap">
+          <img class="image" src="placeholder.png" alt="">
+        </li>
+        <li class="list-content image-wrap">
+          <img class="image" src="placeholder.png" alt="">
+        </li>
+        <li class="list-content image-wrap">
+          <img class="image" src="placeholder.png" alt="">
+        </li>
+        <li class="list-content image-wrap">
+          <img class="image" src="placeholder.png" alt="">
+        </li>
+        <li class="list-content image-wrap">
+          <img class="image" src="placeholder.png" alt="">
+        </li>
+        <li class="list-content image-wrap">
+          <img class="image" src="placeholder.png" alt="">
+        </li>
+        <li class="list-content image-wrap">
+          <img class="image" src="placeholder.png" alt="">
+        </li>
+      </ul>
+    </li>
+
+    <li>
+      <ul id="fs">
+        <li class="list-title">
+          <span class="title-span">防水处理</span>
+        </li>
+        <li class="list-content image-wrap">
+          <img class="image" src="placeholder.png" alt="">
+        </li>
+        <li class="list-content image-wrap">
+          <img class="image" src="placeholder.png" alt="">
+        </li>
+        <li class="list-content image-wrap">
+          <img class="image" src="placeholder.png" alt="">
+        </li>
+        <li class="list-content image-wrap">
+          <img class="image" src="placeholder.png" alt="">
+        </li>
+        <li class="list-content image-wrap">
+          <img class="image" src="placeholder.png" alt="">
+        </li>
+        <li class="list-content image-wrap">
+          <img class="image" src="placeholder.png" alt="">
+        </li>
+        <li class="list-content image-wrap">
+          <img class="image" src="placeholder.png" alt="">
+        </li>
+        <li class="list-content image-wrap">
+          <img class="image" src="placeholder.png" alt="">
+        </li>
+        <li class="list-content image-wrap">
+          <img class="image" src="placeholder.png" alt="">
+        </li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul id="leadRailsInstall">
+    <div class="line"></div>
+    <li class="list-title">
+      <span class="title-span">
+        <img class="title-img" src="images/check-title-icon.png" alt="">
+        导轨安装完成
+      </span>
+      <span class="icon icon-check">√</span>
+    </li>
+    <div class="line line-short"></div>
+    <li class="list-content">
+      <ul id="lr">
+        <li class="list-title">
+          <span class="title-span">导轨安装</span>
+        </li>
+        <li class="list-content image-wrap">
+          <img class="image" src="placeholder.png" alt="">
+        </li>
+        <li class="list-content image-wrap">
+          <img class="image" src="placeholder.png" alt="">
+        </li>
+        <li class="list-content image-wrap">
+          <img class="image" src="placeholder.png" alt="">
+        </li>
+        <li class="list-content image-wrap">
+          <img class="image" src="placeholder.png" alt="">
+        </li>
+        <li class="list-content image-wrap">
+          <img class="image" src="placeholder.png" alt="">
+        </li>
+        <li class="list-content image-wrap">
+          <img class="image" src="placeholder.png" alt="">
+        </li>
+        <li class="list-content image-wrap">
+          <img class="image" src="placeholder.png" alt="">
+        </li>
+        <li class="list-content image-wrap">
+          <img class="image" src="placeholder.png" alt="">
+        </li>
+        <li class="list-content image-wrap">
+          <img class="image" src="placeholder.png" alt="">
+        </li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul id="componentsInstall">
+    <div class="line"></div>
+    <li class="list-title">
+      <span class="title-span">
+        <img class="title-img" src="images/check-title-icon.png" alt="">
+        组件安装完成
+      </span>
+      <span class="icon icon-check">√</span>
+    </li>
+    <div class="line line-short"></div>
+    <li class="list-content">
+      <ul id="comps">
+        <li class="list-title">
+          <span class="title-span">组件安装</span>
+        </li>
+        <li class="list-content image-wrap">
+          <img class="image" src="placeholder.png" alt="">
+        </li>
+        <li class="list-content image-wrap">
+          <img class="image" src="placeholder.png" alt="">
+        </li>
+        <li class="list-content image-wrap">
+          <img class="image" src="placeholder.png" alt="">
+        </li>
+        <li class="list-content image-wrap">
+          <img class="image" src="placeholder.png" alt="">
+        </li>
+        <li class="list-content image-wrap">
+          <img class="image" src="placeholder.png" alt="">
+        </li>
+        <li class="list-content image-wrap">
+          <img class="image" src="placeholder.png" alt="">
+        </li>
+        <li class="list-content image-wrap">
+          <img class="image" src="placeholder.png" alt="">
+        </li>
+        <li class="list-content image-wrap">
+          <img class="image" src="placeholder.png" alt="">
+        </li>
+        <li class="list-content image-wrap">
+          <img class="image" src="placeholder.png" alt="">
+        </li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul id="nbqInstall">
+    <div class="line"></div>
+    <li class="list-title">
+      <span class="title-span">
+        <img class="title-img" src="images/check-title-icon.png" alt="">
+        5.逆变器安装完成
+      </span>
+      <span class="icon icon-check">√</span>
+    </li>
+    <div class="line line-short"></div>
+    <li class="list-content">
+      <ul id="nbq">
+        <li class="list-title">
+          <span class="title-span">逆变器安装</span>
+        </li>
+        <li class="list-content image-wrap">
+          <img class="image" src="placeholder.png" alt="">
+        </li>
+        <li class="list-content image-wrap">
+          <img class="image" src="placeholder.png" alt="">
+        </li>
+        <li class="list-content image-wrap">
+          <img class="image" src="placeholder.png" alt="">
+        </li>
+        <li class="list-content image-wrap">
+          <img class="image" src="placeholder.png" alt="">
+        </li>
+        <li class="list-content image-wrap">
+          <img class="image" src="placeholder.png" alt="">
+        </li>
+        <li class="list-content image-wrap">
+          <img class="image" src="placeholder.png" alt="">
+        </li>
+        <li class="list-content image-wrap">
+          <img class="image" src="placeholder.png" alt="">
+        </li>
+        <li class="list-content image-wrap">
+          <img class="image" src="placeholder.png" alt="">
+        </li>
+        <li class="list-content image-wrap">
+          <img class="image" src="placeholder.png" alt="">
+        </li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul id="pdxInstall">
+    <div class="line"></div>
+    <li class="list-title">
+      <span class="title-span">
+        <img class="title-img" src="images/check-title-icon.png" alt="">
+        配电箱安装完成
+      </span>
+      <span class="icon icon-check">√</span>
+    </li>
+    <div class="line line-short"></div>
+    <li class="list-content">
+      <ul id="pdx">
+        <li class="list-title">
+          <span class="title-span">配电箱安装</span>
+        </li>
+        <li class="list-content image-wrap">
+          <img class="image" src="placeholder.png" alt="">
+        </li>
+        <li class="list-content image-wrap">
+          <img class="image" src="placeholder.png" alt="">
+        </li>
+        <li class="list-content image-wrap">
+          <img class="image" src="placeholder.png" alt="">
+        </li>
+        <li class="list-content image-wrap">
+          <img class="image" src="placeholder.png" alt="">
+        </li>
+        <li class="list-content image-wrap">
+          <img class="image" src="placeholder.png" alt="">
+        </li>
+        <li class="list-content image-wrap">
+          <img class="image" src="placeholder.png" alt="">
+        </li>
+        <li class="list-content image-wrap">
+          <img class="image" src="placeholder.png" alt="">
+        </li>
+        <li class="list-content image-wrap">
+          <img class="image" src="placeholder.png" alt="">
+        </li>
+        <li class="list-content image-wrap">
+          <img class="image" src="placeholder.png" alt="">
+        </li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul id="installStart">
+    <div class="line"></div>
+    <li class="list-title">
+      <span class="title-span">
+        <img class="title-img" src="images/check-title-icon.png" alt="">
+        并网完成
+      </span>
+      <span class="icon icon-check">√</span>
+    </li>
+  </ul>
+
+  <script>
+    var hook_len = document.getElementById('hook').children.length - 1,
+        fs_len = document.getElementById('fs').children.length - 1,
+        lr_len = document.getElementById('lr').children.length - 1,
+        comps_len = document.getElementById('comps').children.length - 1,
+        nbq_len = document.getElementById('nbq').children.length - 1,
+        pdx_len = document.getElementById('pdx').children.length - 1;
+    var images = document.querySelectorAll('.image');
+    var vw = document.body.clientWidth;
+    var imageWidth = images[0].offsetWidth;
+    marginTop = (vw - imageWidth * 3) / 4;
+    images.forEach(function(image) {
+      image.parentNode.style.height = imageWidth + 'px';
+      image.parentNode.style.marginTop = marginTop + 'px';
+    });
+    images[hook_len - 1].parentNode.style.marginBottom = marginTop + 'px';
+    images[hook_len + fs_len - 1].parentNode.style.marginBottom = marginTop + 'px';
+    images[hook_len + fs_len + lr_len - 1].parentNode.style.marginBottom = marginTop + 'px';
+    images[hook_len + fs_len + lr_len + comps_len - 1].parentNode.style.marginBottom = marginTop + 'px';
+    images[hook_len + fs_len + lr_len + comps_len + nbq_len - 1].parentNode.style.marginBottom = marginTop + 'px';
+    images[images.length - 1].parentNode.style.marginBottom = marginTop + 'px';
+  </script>
+</body>
