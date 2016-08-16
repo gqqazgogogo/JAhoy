@@ -235,7 +235,7 @@
 
   <div id="hammer-mask"></div>
   <div id="hammer-bg" onclick="hideHammer(event)">
-    <div id="hammer-box">
+    <div id="hammer-box" class="hammer-box-scroll">
       <img id="image-big" src="images/htjd01.png" alt="">
     </div>
     <div id="hammer-page">1/1</div>
@@ -279,9 +279,9 @@
 
     //hammer init
     var mc = new Hammer.Manager(hammerBox);
-    mc.add(new Hammer.Pan({ threshold: 0, pointers: 0 }));
     mc.add(new Hammer.Swipe());
     mc.add(new Hammer.Pinch({ threshold: 0 }));
+    mc.add(new Hammer.Tap({ event: 'doubletap', taps: 2 }));
 
     //hammer 监听
     mc.on('swipe', function(ev) {
@@ -294,7 +294,6 @@
       }
 
     });
-
     var initScale = 1;
     mc.on('pinchstart pinchmove',function (ev) {
       //pinch scale
@@ -303,13 +302,17 @@
         imgBig.style.left = 0;
         imgBig.style.top = 0;
       } else {
-
         if(ev.type == 'pinchstart') {
           initScale = transform.scale || 1;
         }
 
         imgBig.className = '';
         transform.scale = initScale * ev.scale;
+        if(transform.scale > 1) {
+          var shift = (transform.scale - 1)/2;
+          imgBig.style.top = imgBig.offsetHeight * shift;
+          imgBig.style.left = imgBig.offsetWidth * shift;
+        }
 
         requestElementUpdate();
 
@@ -317,6 +320,17 @@
           hammerBox.className = "hammer-box-scroll";
         },200);
 
+      }
+    });
+    mc.on('doubletap', function(ev) {
+      if(initScale == 1) {
+        initScale = 3;
+        transform.scale = initScale;
+        requestElementUpdate();
+      } else {
+        initScale = 1;
+        transform.scale = initScale;
+        requestElementUpdate();
       }
     });
     //hammer 监听结束
