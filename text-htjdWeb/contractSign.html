@@ -114,11 +114,11 @@
       position: relative;
       left: 0;
       width: 100%;
-      -webkit-transition: all 0.01s;
-      -moz-transition: all 0.01s;
-      -ms-transition: all 0.01s;
-      -o-transition: all 0.01s;
-      transition: all 0.01s;
+      -webkit-transition: all 0.05s;
+      -moz-transition: all 0.05s;
+      -ms-transition: all 0.05s;
+      -o-transition: all 0.05s;
+      transition: all 0.05s;
     }
     #hammer-page {
       position: absolute;
@@ -304,9 +304,6 @@
         imgBig.style.left = 0;
         imgBig.style.top = 0;
       } else {
-        if(ev.type == 'pinchstart') {
-          initScale = transform.scale || 1;
-        }
 
         imgBig.className = '';
         transform.scale = initScale * ev.scale;
