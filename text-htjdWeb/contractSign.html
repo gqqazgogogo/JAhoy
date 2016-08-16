@@ -276,21 +276,21 @@
     var mc = new Hammer.Manager(hammerBox);
     mc.add(new Hammer.Pan({ threshold: 0, pointers: 0 }));
 //    mc.add(new Hammer.Swipe()).recognizeWith(mc.get('pan'));
-    mc.add(new Hammer.Pinch({ threshold: 0 })).recognizeWith(mc.get('pan'));
+    mc.add(new Hammer.Pinch({ threshold: 0 }));
     mc.add(new Hammer.Tap({ event: 'doubletap', taps: 2 }));
 
     //hammer 监听
     mc.on('pan', function(ev) {
       transform.top = ev.deltaY;
       transform.left = ev.deltaX;
-      if(Math.abs(transform.top) < shiftHeight) {
+      if(Math.abs(transform.top) > shiftHeight) {
         if(transform.top > 0) {
           transform.top = shiftHeight;
         } else {
           transform.top = -shiftHeight;
         }
       }
-      if(Math.abs(transform.left) < shiftWidth) {
+      if(Math.abs(transform.left) > shiftWidth) {
         if(transform.left > 0) {
           transform.left = shiftWidth;
         } else {
