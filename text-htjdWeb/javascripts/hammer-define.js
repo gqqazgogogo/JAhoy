@@ -9,7 +9,7 @@ var hammerPage = document.getElementById('hammer-page');
 var imgBig = document.getElementById('image-big');
 var hammerImgs = [];
 var ticking = false;
-var transform = {scale: 1, top: 0, left: 0, lastTop:0, lastLeft:0};
+var transform = {scale: 1, lastScale: 1, top: 0, left: 0, lastTop:0, lastLeft:0};
 
 //hammer init
 var mc = new Hammer.Manager(hammerBox);
@@ -20,7 +20,6 @@ mc.add(new Hammer.Tap({ event: 'doubletap', taps: 2 }));
 
 //hammer 监听
 mc.on('pan panend', function(ev) {
-    console.log("type:"+ev.type+" x:"+ev.deltaX+"  y:"+ev.deltaY+"   lasttop:"+transform.lastTop + "    lastleft:"+transform.lastLeft);
     transform.top = transform.lastTop + ev.deltaY;
     transform.left = transform.lastLeft + ev.deltaX;
     if(ev.type == 'panend') {
@@ -57,7 +56,6 @@ mc.on('pan panend', function(ev) {
 //      }
 //
 //    });
-var initScale = 1;
 var shiftWidth = 0;
 var shiftHeight = 0;
 mc.on('pinchstart pinchmove pinchend',function (ev) {
@@ -65,10 +63,8 @@ mc.on('pinchstart pinchmove pinchend',function (ev) {
     if(ev.type == 'pinchstart') {
         shiftWidth = 0;
         shiftHeight = 0;
-        return;
     } else if(ev.type == 'pinchmove') {
-
-        transform.scale = initScale * ev.scale;
+        transform.scale = transform.lastScale * ev.scale;
         if(transform.scale > 1) {
             shiftWidth = (transform.scale-1)/2*imgBig.offsetWidth;
             shiftHeight = (transform.scale-1)/2*imgBig.offsetHeight;
@@ -78,22 +74,25 @@ mc.on('pinchstart pinchmove pinchend',function (ev) {
 
     } else if (ev.type == 'pinchend') {
 
-        transform.scale = initScale * ev.scale;
+        transform.scale = transform.lastScale * ev.scale;
         if(transform.scale > 0.7 && transform.scale < 1.3) {
             transform.scale = 1;
             transform.top = 0;
             transform.left = 0;
         }
+        transform.lastScale = transform.scale;
 
     }
 });
 mc.on('doubletap', function(ev) {
     if(transform.scale < 3 && transform.scale >= 1) {
         transform.scale = 3;
+        transform.lastScale = 3;
         shiftWidth = (transform.scale-1)/2*imgBig.offsetWidth;
         shiftHeight = (transform.scale-1)/2*imgBig.offsetHeight;
-    } else if(transform.scale < 1 | transform.scale >= 3) {
+    } else if(transform.scale < 1 || transform.scale >= 3) {
         transform.scale = 1;
+        transform.lastScale = 1;
         transform.lastLeft = 0;
         transform.lastTop = 0;
         transform.left = 0;
