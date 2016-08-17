@@ -285,13 +285,6 @@
       transform.top = transform.lastTop + ev.deltaY;
       transform.left = transform.lastLeft + ev.deltaX;
       if(ev.type == 'panend') {
-        if(transform.scale <= 1) {
-          transform.lastLeft = 0;
-          transform.lastTop = 0;
-        } else {
-          transform.lastTop = transform.top;
-          transform.lastLeft = transform.left;
-        }
         if(Math.abs(transform.top) > shiftHeight) {
           if(transform.top > 0) {
             transform.top = shiftHeight;
@@ -305,6 +298,12 @@
           } else {
             transform.left = -shiftWidth;
           }
+        }
+        transform.lastTop = transform.top;
+        transform.lastLeft = transform.left;
+        if(transform.scale <= 1) {
+          transform.lastLeft = 0;
+          transform.lastTop = 0;
         }
       }
       requestElementUpdate();
