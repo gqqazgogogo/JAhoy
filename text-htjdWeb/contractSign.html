@@ -269,7 +269,7 @@
       "images/htjd04.png"
     ];
     var ticking = false;
-    var transform = {scale: 1, top: 0, left: 0};
+    var transform = {scale: 1, top: 0, left: 0, lastTop:0, lastLeft:0};
     var timer;
 
     //hammer init
@@ -280,25 +280,33 @@
     mc.add(new Hammer.Tap({ event: 'doubletap', taps: 2 }));
 
     //hammer 监听
-    mc.on('pan', function(ev) {
-      transform.top = ev.deltaY;
-      transform.left = ev.deltaX;
-//      if(ev.type == 'panend') {
-//        if(Math.abs(transform.top) > shiftHeight) {
-//          if(transform.top > 0) {
-//            transform.top = shiftHeight;
-//          } else {
-//            transform.top = -shiftHeight;
-//          }
-//        }
-//        if(Math.abs(transform.left) > shiftWidth) {
-//          if(transform.left > 0) {
-//            transform.left = shiftWidth;
-//          } else {
-//            transform.left = -shiftWidth;
-//          }
-//        }
-//      }
+    mc.on('pan panend', function(ev) {
+      console.log("type:"+ev.type+" x:"+ev.deltaX+"  y:"+ev.deltaY+"   lasttop:"+transform.lastTop + "    lastleft:"+transform.lastLeft);
+      transform.top = transform.lastTop + ev.deltaY;
+      transform.left = transform.lastLeft + ev.deltaX;
+      if(ev.type == 'panend') {
+        if(transform.scale < 1) {
+          transform.lastLeft = 0;
+          transform.lastTop = 0;
+        } else {
+          transform.lastTop = transform.top;
+          transform.lastLeft = transform.left;
+        }
+        if(Math.abs(transform.top) > shiftHeight) {
+          if(transform.top > 0) {
+            transform.top = shiftHeight;
+          } else {
+            transform.top = -shiftHeight;
+          }
+        }
+        if(Math.abs(transform.left) > shiftWidth) {
+          if(transform.left > 0) {
+            transform.left = shiftWidth;
+          } else {
+            transform.left = -shiftWidth;
+          }
+        }
+      }
       requestElementUpdate();
     });
 //    mc.on('swipe', function(ev) {
@@ -342,15 +350,20 @@
       }
     });
     mc.on('doubletap', function(ev) {
-      if(transform.scale != 3 && transform.scale > 1) {
+      if(transform.scale < 3 && transform.scale >= 1) {
         transform.scale = 3;
-        requestElementUpdate();
-      } else if(transform.scale < 1) {
+        shiftWidth = (transform.scale-1)/2*imgBig.offsetWidth;
+        shiftHeight = (transform.scale-1)/2*imgBig.offsetHeight;
+      } else if(transform.scale < 1 | transform.scale >= 3) {
         transform.scale = 1;
-        transform.top = 0;
+        transform.lastLeft = 0;
+        transform.lastTop = 0;
         transform.left = 0;
-        requestElementUpdate();
+        transform.top = 0;
+        shiftWidth = 0;
+        shiftHeight = 0;
       }
+      requestElementUpdate();
     });
     //hammer 监听结束
 
