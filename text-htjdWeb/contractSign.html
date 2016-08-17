@@ -285,7 +285,7 @@
       transform.top = transform.lastTop + ev.deltaY;
       transform.left = transform.lastLeft + ev.deltaX;
       if(ev.type == 'panend') {
-        if(transform.scale < 1) {
+        if(transform.scale <= 1) {
           transform.lastLeft = 0;
           transform.lastTop = 0;
         } else {
