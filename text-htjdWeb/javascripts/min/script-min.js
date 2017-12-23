@@ -1,1 +1,0 @@
-!function(){"use strict";var e="myJSON.json",t=null;window.XMLHttpRequest&&(t=new XMLHttpRequest),t.open("get",e,!0),t.send(null),t.onreadystatechange=function(){if(4===t.readyState&&200===t.status)var e=JSON.parse(t.responseText)}}();
